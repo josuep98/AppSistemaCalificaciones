@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarS2T1.MainCalificaciones">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Frame BackgroundColor="Beige" Padding="14" CornerRadius="0">
+                    <Label Text="Sistema de Calificaciones" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!--Bloque Primer Parcial-->
+                    <Label Text="|Notas primer parcial: " FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2"/>
+                    <Label Text="Parcial - 1: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="TxtPrimerParcial" Placeholder="Primer parcial" Grid.Row="1" Grid.Column="1" Keyboard="Numeric" TextChanged="TxtPrimerParcial_TextChanged" />
+                    <Label Text="Examen - 1: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="TxtPrimerExamen" Placeholder="Examen primer parcial" Grid.Row="2" Grid.Column="1" Keyboard="Numeric" TextChanged="TxtPrimerExamen_TextChanged"/>
+                    <Label Text="Nota Parcial - 1: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="TxtTotalPrimerParcial" Placeholder="Nota primer parcial" Grid.Row="3" Grid.Column="1" IsReadOnly="True"/>
+
+                    <!--Bloque Segundo Parcial-->
+                    <Label Text="|Notas segundo parcial: " FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Grid.Row="4" Grid.ColumnSpan="2"/>
+                    <Label Text="Parcial - 2: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="5" Grid.Column="0"/>
+                    <Entry x:Name="TxtSegundoParcial" Placeholder="Segundo parcial" Grid.Row="5" Grid.Column="1" Keyboard="Numeric" TextChanged="TxtSegundoParcial_TextChanged" />
+                    <Label Text="Examen - 2: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="6" Grid.Column="0"/>
+                    <Entry x:Name="TxtSegundoExamen" Placeholder="Examen segundo parcial" Grid.Row="6" Grid.Column="1" Keyboard="Numeric" TextChanged="TxtSegundoExamen_TextChanged"/>
+                    <Label Text="Nota Parcial - 2: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="7" Grid.Column="0"/>
+                    <Entry x:Name="TxtTotalSegundoParcial" Placeholder="Nota segundo parcial" Grid.Row="7" Grid.Column="1" IsReadOnly="True"/>
+
+                    <!--Bloque Final-->
+                    <Label Text="Promedio final: " FontSize="17" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="8" Grid.Column="0"/>
+                    <Entry x:Name="TxtPromedioFinal" Placeholder="Nota final semestre" Grid.Row="8" Grid.Column="1" Keyboard="Numeric" IsReadOnly="True" TextChanged="TxtSegundoParcial_TextChanged" />
+                    <Label x:Name="LblEstado" FontSize="17" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="9" Grid.ColumnSpan="2"/>
+
+                </Grid>
+
+                <Button x:Name="BtnCalcularTotal" Text="Calcular Notas" Clicked="BtnCalcularTotal_Clicked" />
+                <Button x:Name="BtnLimpiar" Text="Nuevo Cálculo" Clicked="BtnLimpiar_Clicked" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
