@@ -17,6 +17,8 @@ namespace JPaucarS2T1
             InitializeComponent();
         }
 
+        //Todo sin arquitectura xD
+
         //Muestra dependiendo de la bandera un tipo de mensaje de error
         private async Task AlertaErrorAsync(bool caracteres = false)
         {
