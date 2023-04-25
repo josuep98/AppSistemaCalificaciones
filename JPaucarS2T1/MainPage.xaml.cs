@@ -22,11 +22,17 @@ namespace JPaucarS2T1
 
         private void BtnIngresar_Clicked(object sender, EventArgs e)
         {
-            if (TxtUsuario.Text.Equals(User) && TxtPass.Text.Equals(Pass))
-                Navigation.PushAsync(new MainCalificaciones(User));
+            if (!string.IsNullOrEmpty(TxtUsuario.Text) || !string.IsNullOrEmpty(TxtUsuario.Text))
+            {
+                if (TxtUsuario.Text.Equals(User) && TxtPass.Text.Equals(Pass))
+                    Navigation.PushAsync(new MainCalificaciones(User));
+                else
+                    DisplayAlert("Error de ingreso", "El usuario y/o contraseña son incorrectos, por favor intente de nuevo", "Aceptar");
+
+                Limpiar();
+            }
             else
-                DisplayAlert("Error de ingreso", "El usuario y/o contraseña son incorrectos, por favor intente de nuevo", "Aceptar");
-            Limpiar();
+                DisplayAlert("Error en campos", "No puede dejar campos vacíos, por favor intente de nuevo", "Aceptar");
         }
 
         private void Limpiar()
