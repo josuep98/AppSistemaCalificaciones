@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JPaucarS2T1.MainPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="Beige" Padding="14" CornerRadius="0">
+                    <Label Text="Inicio de sesión" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                </Frame>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Image Source="userlogin.png" WidthRequest="250" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" />
+
+                    <Entry x:Name="TxtUsuario" Placeholder="Ingrese usuario" Grid.Column="0" Grid.Row="1" />
+                    <Entry x:Name="TxtPass" Placeholder="Ingrese contraseña" IsPassword="True" Grid.Column="0" Grid.Row="2" />
+                    <Button x:Name="BtnIngresar" Text="Ingresar" Clicked="BtnIngresar_Clicked" Grid.Column="0" Grid.Row="3"/>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

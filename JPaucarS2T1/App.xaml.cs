@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace JPaucarS2T1
 {
@@ -10,7 +8,7 @@ namespace JPaucarS2T1
         {
             InitializeComponent();
 
-            MainPage = new MainCalificaciones();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

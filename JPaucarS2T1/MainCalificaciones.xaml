@@ -9,6 +9,7 @@
                 <Frame BackgroundColor="Beige" Padding="14" CornerRadius="0">
                     <Label Text="Sistema de Calificaciones" FontSize="24" HorizontalTextAlignment="Center" FontAttributes="Bold" />
                 </Frame>
+                <Label x:Name="LblBienvenida" FontSize="18" Text="Bienvenido usuario: " HorizontalTextAlignment="Start" />
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -20,7 +21,6 @@
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
-
 
                         <RowDefinition/>
                         <RowDefinition/>

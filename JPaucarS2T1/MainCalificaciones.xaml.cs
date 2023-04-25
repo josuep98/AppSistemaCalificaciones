@@ -12,12 +12,11 @@ namespace JPaucarS2T1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainCalificaciones : ContentPage
     {
-        public MainCalificaciones()
+        public MainCalificaciones(string usuario = "")
         {
             InitializeComponent();
+            LblBienvenida.Text += usuario;
         }
-
-        //Todo sin arquitectura xD
 
         //Muestra dependiendo de la bandera un tipo de mensaje de error
         private async Task AlertaErrorAsync(bool caracteres = false)
